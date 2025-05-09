@@ -1,0 +1,104 @@
+/* Reset básico */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Cabeçalhos */
+h1, h2 {
+    margin: 20px 0;
+    text-align: center;
+    color: #222;
+}
+
+/* Formulário */
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 70vw;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #034103;
+}
+
+/* Seção de produtos */
+.products {
+    width: 80%;
+    max-width: 800px;
+    margin-top: 30px;
+}
+
+.products h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.products .product-item {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    transition: transform 0.3s;
+}
+
+.products .product-item:hover {
+    transform: scale(1.02);
+}
+
+.products .product-item:nth-child(odd) {
+    background-color: #e8e8e8;
+}
+
+.products .product-item:first-child {
+    margin-top: 5vh;
+}
+
+.products .product-item:last-child {
+    margin-bottom: 5vh;
+}

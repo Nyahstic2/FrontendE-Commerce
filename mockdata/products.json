@@ -1,0 +1,74 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Maçã Grande",
+      "description": "Uma maçã suculenta que restaura bastante a Fome.",
+      "qtd": 50,
+      "price": 100.00
+    },
+    {
+      "id": 2,
+      "name": "Elixir Max",
+      "description": "Restaura completamente o PP de todos os movimentos.",
+      "qtd": 30,
+      "price": 250.00
+    },
+    {
+      "id": 3,
+      "name": "Semente Reviver",
+      "description": "Revive um Pokémon caído com metade do HP.",
+      "qtd": 20,
+      "price": 500.00
+    },
+    {
+      "id": 4,
+      "name": "Orbe de Fuga",
+      "description": "Permite escapar instantaneamente de uma dungeon.",
+      "qtd": 15,
+      "price": 300.00
+    },
+    {
+      "id": 5,
+      "name": "Orbe de Identificação",
+      "description": "Revela todos os itens não identificados no andar atual.",
+      "qtd": 10,
+      "price": 200.00
+    },
+    {
+      "id": 6,
+      "name": "Bastão de Ferro",
+      "description": "Arma simples que aumenta o dano físico em combate.",
+      "qtd": 25,
+      "price": 150.00
+    },
+    {
+      "id": 7,
+      "name": "Capa de Evasão",
+      "description": "Equipamento que aumenta a chance de esquiva.",
+      "qtd": 10,
+      "price": 400.00
+    },
+    {
+      "id": 8,
+      "name": "Orbe de Armadilha",
+      "description": "Desativa todas as armadilhas no andar atual.",
+      "qtd": 5,
+      "price": 350.00
+    },
+    {
+      "id": 9,
+      "name": "Semente de Confusão",
+      "description": "Faz o inimigo entrar em estado de confusão.",
+      "qtd": 40,
+      "price": 80.00
+    },
+    {
+      "id": 10,
+      "name": "Orbe de Recrutamento",
+      "description": "Aumenta a chance de recrutar Pokémon selvagens.",
+      "qtd": 8,
+      "price": 600.00
+    }
+  ]
+}
