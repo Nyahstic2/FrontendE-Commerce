@@ -9,66 +9,136 @@
     },
     {
       "id": 2,
-      "name": "Elixir Max",
-      "description": "Restaura completamente o PP de todos os movimentos.",
+      "name": "Poção Revigorante",
+      "description": "Uma poção que restaura uma boa quantidade de energia durante uma batalha.",
       "qtd": 30,
-      "price": 250.00
+      "price": 150.00
     },
     {
       "id": 3,
-      "name": "Semente Reviver",
-      "description": "Revive um Pokémon caído com metade do HP.",
+      "name": "Reviver",
+      "description": "Um item que pode reviver um Pokémon que tenha caído em combate.",
       "qtd": 20,
       "price": 500.00
     },
     {
       "id": 4,
-      "name": "Orbe de Fuga",
-      "description": "Permite escapar instantaneamente de uma dungeon.",
-      "qtd": 15,
-      "price": 300.00
-    },
-    {
-      "id": 5,
-      "name": "Orbe de Identificação",
-      "description": "Revela todos os itens não identificados no andar atual.",
-      "qtd": 10,
+      "name": "Bola de Poeira",
+      "description": "Uma bola usada para capturar Pokémon ou usá-los em combates.",
+      "qtd": 100,
       "price": 200.00
     },
     {
+      "id": 5,
+      "name": "Poção Curativa",
+      "description": "Uma poção que cura uma quantidade moderada de HP.",
+      "qtd": 40,
+      "price": 120.00
+    },
+    {
       "id": 6,
-      "name": "Bastão de Ferro",
-      "description": "Arma simples que aumenta o dano físico em combate.",
-      "qtd": 25,
-      "price": 150.00
+      "name": "Baqueta da Sorte",
+      "description": "Um item raro que aumenta temporariamente a sorte do usuário em combate.",
+      "qtd": 10,
+      "price": 1000.00
     },
     {
       "id": 7,
-      "name": "Capa de Evasão",
-      "description": "Equipamento que aumenta a chance de esquiva.",
-      "qtd": 10,
-      "price": 400.00
-    },
-    {
-      "id": 8,
-      "name": "Orbe de Armadilha",
-      "description": "Desativa todas as armadilhas no andar atual.",
-      "qtd": 5,
+      "name": "Semente de Escudo",
+      "description": "Uma semente que aumenta a defesa de um Pokémon quando consumida.",
+      "qtd": 15,
       "price": 350.00
     },
     {
+      "id": 8,
+      "name": "Bola de Fogo",
+      "description": "Uma esfera que causa dano de fogo em um oponente ou objeto.",
+      "qtd": 25,
+      "price": 400.00
+    },
+    {
       "id": 9,
-      "name": "Semente de Confusão",
-      "description": "Faz o inimigo entrar em estado de confusão.",
-      "qtd": 40,
-      "price": 80.00
+      "name": "Semente da Força",
+      "description": "Uma semente que aumenta temporariamente o ataque de um Pokémon.",
+      "qtd": 20,
+      "price": 300.00
     },
     {
       "id": 10,
-      "name": "Orbe de Recrutamento",
-      "description": "Aumenta a chance de recrutar Pokémon selvagens.",
-      "qtd": 8,
+      "name": "Escudo Espinhoso",
+      "description": "Um item que reflete dano em inimigos que atacam o usuário.",
+      "qtd": 12,
       "price": 600.00
+    },
+    {
+      "id": 11,
+      "name": "Talisman de Proteção",
+      "description": "Um amuleto que reduz a probabilidade de sofrer ataques críticos.",
+      "qtd": 5,
+      "price": 700.00
+    },
+    {
+      "id": 12,
+      "name": "Cristal de Cura",
+      "description": "Um cristal mágico que pode curar todos os status negativos de um Pokémon.",
+      "qtd": 8,
+      "price": 800.00
+    },
+    {
+      "id": 13,
+      "name": "Pó de Aceleração",
+      "description": "Uma substância que acelera os movimentos de um Pokémon durante um combate.",
+      "qtd": 25,
+      "price": 250.00
+    },
+    {
+      "id": 14,
+      "name": "Bola de Gelo",
+      "description": "Uma esfera congelante que causa dano de gelo a um oponente.",
+      "qtd": 30,
+      "price": 350.00
+    },
+    {
+      "id": 15,
+      "name": "Elixir de Energia",
+      "description": "Um elixir que restaura uma quantidade significativa de energia em combate.",
+      "qtd": 18,
+      "price": 450.00
+    },
+    {
+      "id": 16,
+      "name": "Gema da Agilidade",
+      "description": "Uma gema que aumenta temporariamente a velocidade do Pokémon que a utiliza.",
+      "qtd": 10,
+      "price": 550.00
+    },
+    {
+      "id": 17,
+      "name": "Semente do Manto",
+      "description": "Uma semente que cria uma camada de proteção ao redor do Pokémon, reduzindo danos recebidos.",
+      "qtd": 22,
+      "price": 420.00
+    },
+    {
+      "id": 18,
+      "name": "Pergaminho de Invocação",
+      "description": "Um pergaminho antigo que invoca um aliado temporário para ajudar em combate.",
+      "qtd": 3,
+      "price": 1200.00
+    },
+    {
+      "id": 19,
+      "name": "Alma de Fênix",
+      "description": "Um item raro que pode ressuscitar um Pokémon com HP total em um momento crítico.",
+      "qtd": 5,
+      "price": 2000.00
+    },
+    {
+      "id": 20,
+      "name": "Fruta Vital",
+      "description": "Uma fruta rara que aumenta permanentemente a saúde máxima de um Pokémon.",
+      "qtd": 8,
+      "price": 1500.00
     }
   ]
 }

@@ -68,8 +68,8 @@ button:hover {
 
 /* Seção de produtos */
 .products {
-    width: 80%;
-    max-width: 800px;
+    width: 100%;
+    max-width: 60vw;
     margin-top: 30px;
 }
 
