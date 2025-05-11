@@ -11,6 +11,7 @@ export default class Database {
         let promise = await fetch("../mockdata/products.json");
         if (promise.ok){
             let json = await promise.json();
+            this.id = 21;
             console.table(json.products);
             this.save(json.products);
         }
