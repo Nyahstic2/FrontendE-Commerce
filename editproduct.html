@@ -23,7 +23,10 @@
     <button type="submit">Enviar</button>
   </form>
 
-  <script>
+  
+  <script type="module">
+    import database from "/JS/mock_database.js";
+    const daatabase = new database();
     
     const form = document.getElementById("itemForm");
     function getQueryParam(param) {
@@ -32,30 +35,44 @@
     }
 
     async function preencherFormularioPorID(id) {
-      try {
-        const response = await fetch('/mockdata/products.json');
-        const data = await response.json();
-
-        const produto = data.products.find(p => p.id === parseInt(id));
-
-        if (produto) {
-          form.name.value = produto.name;
-          form.description.value = produto.description;
-          form.qtd.value = produto.qtd;
-          form.price.value = produto.price;
+        if(false){
+            try {
+              const response = await fetch('/mockdata/products.json');
+              const data = await response.json();
+            
+              const produto = data.products.find(p => p.id === parseInt(id));
+            
+              if (produto) {
+                form.name.value = produto.name;
+                form.description.value = produto.description;
+                form.qtd.value = produto.qtd;
+                form.price.value = produto.price;
+              }
+            } catch (error) {
+              console.error("Erro ao carregar produtos:", error);
+            }
         }
-      } catch (error) {
-        console.error("Erro ao carregar produtos:", error);
-      }
+        else{
+            let result = daatabase.getItem(id);
+            if (result) {
+                form.name.value = result.name;
+                form.description.value = result.description;
+                form.qtd.value = result.qtd;
+                form.price.value = result.price;
+            }
+            else{
+                document.location = "/manage.html";
+            }
+        }
     }
 
     const idQuery = getQueryParam("product");
     
-    preencherFormularioPorID(parseInt(idQuery));
     if (idQuery == null || idQuery == undefined) {
-      
-      document.location = "/manage.html";
+        document.location = "/manage.html";
     }
+
+    preencherFormularioPorID(parseInt(idQuery));
 
     form.addEventListener("submit", function(event) {
       event.preventDefault();
@@ -68,6 +85,7 @@
         price: parseFloat(form.price.value)
       };
 
+    if (false){
       const blob = new Blob([JSON.stringify(data)], { type: "application/json" });
       const url = "/api/edit/item"; // Substitua pelo seu endpoint real
 
@@ -79,6 +97,17 @@
       } else {
         alert("Falha ao enviar o item.");  
       }
+    }
+    else{
+        try{ 
+            daatabase.update(idQuery, data);
+            alert("Você conseguiu modificar um item desta loja!");
+            document.location = "/manage.html";
+        }
+        catch{
+            alert("Algo deu errado");
+        }
+    }
     });
   </script>
 </body>

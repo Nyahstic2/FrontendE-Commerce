@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Database Control</title>
+</head>
+<body>
+  <h1>Database Control</h1>
+
+  <button id="reset-db">Reset Database (Clear)</button>
+  <button id="clearLocalStorage">Reset Database (Clear localStorage)</button>
+
+  <div style="margin-top: 20px;">
+    <label for="remove-id">Remove item by ID:</label>
+    <input type="number" id="remove-id" placeholder="Enter item ID" />
+    <button id="remove-item">Remove Item</button>
+  </div>
+
+  <script type="module">
+    import Database from './JS/mock_database.js';
+
+    const db = new Database();
+
+    document.getElementById('reset-db').addEventListener('click', () => {
+      db.clear();
+      alert('Database has been reset.');
+    });
+    
+    document.getElementById('clearLocalStorage').addEventListener('click', () => {
+      localStorage.clear();
+      alert('Database has been reset.');
+    });
+
+
+    document.getElementById('remove-item').addEventListener('click', () => {
+      const idInput = document.getElementById('remove-id');
+      const id = Number(idInput.value);
+      if (!id) {
+        alert('Please enter a valid item ID.');
+        return;
+      }
+      const allItems = db.getAll();
+      const itemExists = allItems.some(item => item.id === id);
+      if (!itemExists) {
+        alert('Item with this ID does not exist.');
+        return;
+      }
+      db.remove(id);
+      alert(`Item with ID ${id} has been removed.`);
+      idInput.value = '';
+    });
+  </script>
+</body>

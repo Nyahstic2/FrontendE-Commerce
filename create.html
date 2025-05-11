@@ -23,35 +23,10 @@
     <button type="submit">Enviar</button>
   </form>
 
-  <script>
-    
+  <script type="module">
+    import database from "/JS/mock_database.js";
     const form = document.getElementById("itemForm");
-    function getQueryParam(param) {
-      const urlParams = new URLSearchParams(window.location.search);
-      return urlParams.get(param);
-    }
-
-    async function preencherFormularioPorID(id) {
-      try {
-        const response = await fetch('/mockdata/products.json');
-        const data = await response.json();
-
-        const produto = data.products.find(p => p.id === parseInt(id));
-
-        if (produto) {
-          form.name.value = produto.name;
-          form.description.value = produto.description;
-          form.qtd.value = produto.qtd;
-          form.price.value = produto.price;
-        }
-      } catch (error) {
-        console.error("Erro ao carregar produtos:", error);
-      }
-    }
-
-    const idQuery = getQueryParam("product");
-    
-    preencherFormularioPorID(parseInt(idQuery));
+    const daatabase = new database();
 
     form.addEventListener("submit", async function(event) {
       event.preventDefault();
@@ -62,28 +37,39 @@
         qtd: parseInt(form.qtd.value),
         price: parseFloat(form.price.value)
       };
+    if (false){
+        const url = "/api/items"; // Substitua pelo seu endpoint real
 
-      const url = "/api/items"; // Substitua pelo seu endpoint real
+        try {
+          const response = await fetch(url, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+          });
 
-      try {
-        const response = await fetch(url, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(data)
-        });
-
-        if (response.ok) {
-          alert("Item enviado com sucesso!");
-          document.location = "/manage.html";
-        } else {
-          alert("Falha ao enviar o item. Código: " + response.status);
+          if (response.ok) {
+            alert("Item enviado com sucesso!");
+            document.location = "/manage.html";
+          } else {
+            alert("Falha ao enviar o item. Código: " + response.status);
+          }
+        } catch (error) {
+          console.error("Erro ao enviar item:", error);
+          alert("Erro ao tentar enviar o item.");
         }
-      } catch (error) {
-        console.error("Erro ao enviar item:", error);
-        alert("Erro ao tentar enviar o item.");
-      }
+    }
+    else{
+        try{ 
+            daatabase.add(data);
+            alert("Você conseguiu adicionar um novo item para esta loja!");
+            document.location = "/manage.html";
+        }
+        catch{
+            alert("Algo deu errado");
+        }
+    }
     });
   </script>
 </body>
